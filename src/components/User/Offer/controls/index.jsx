@@ -41,8 +41,8 @@ export function Controls () {
   return (
     <>
       <div className='absolute left-[-80px] top-[50%] translate-y-[-50%] flex flex-col gap-3'>
-        <aside className=' w-[40px] h-[40px] flex items-center justify-center rounded-full bg-[#7276b5] cursor-pointer ' onClick={handlePrev}><IconArrow styles='fill-[#f0f3ff] scale-100 rotate-[90deg]' /></aside>
-        <aside className=' w-[40px] h-[40px] flex items-center justify-center rounded-full bg-[#7276b5] cursor-pointer ' onClick={handleNext}><IconArrow styles='fill-[#f0f3ff] scale-100 rotate-[-90deg] ' /></aside>
+        <aside className=' w-[40px] h-[40px] flex items-center justify-center rounded-full bg-[#cfd2f5] cursor-pointer ' onClick={handlePrev}><IconArrow styles='fill-[#2c2a2e] scale-100 rotate-[90deg]' /></aside>
+        <aside className=' w-[40px] h-[40px] flex items-center justify-center rounded-full bg-[#cfd2f5] cursor-pointer ' onClick={handleNext}><IconArrow styles='fill-[#2c2a2e] scale-100 rotate-[-90deg] ' /></aside>
       </div>
 
       {

@@ -1,11 +1,14 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { DEFAULT_VALUE } from '../../../../constants'
 import { useSaveOffersContext } from '../../../../hook/useStorageOffersContext'
 import { getFromLocalStorage, saveToLocalStorage } from '../../../../utils'
+import { Modal } from '../../../modal'
 
 export function Card ({ offer }) {
   const { setSaveOffer } = useSaveOffersContext()
   const localStorageOffers = getFromLocalStorage('saveOffers') ?? []
+
+  const [openDetail, setOpenDetail] = useState(false)
 
   const handleDelete = () => {
     const newArrToSave = localStorageOffers.filter((item) => item.offerId !== offer.id)
@@ -15,7 +18,7 @@ export function Card ({ offer }) {
   }
 
   const handleDetails = () => {
-
+    setOpenDetail(true)
   }
 
   return (
@@ -34,6 +37,9 @@ export function Card ({ offer }) {
             </div>
           </div>
         )
+      }
+      {
+        openDetail && (<Modal detailState={setOpenDetail} offer={offer} />)
       }
     </>
   )

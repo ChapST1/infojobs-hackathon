@@ -11,7 +11,7 @@ export function Header ({ offer }) {
         </div>
       </div>
 
-      <a href={offer?.link} target='_blank' className='bg-[#7276b2] text-[#f0f3ff] py-2 px-3 text-sm text-center rounded duration-300 hover:bg-[#676ba7]' rel='noreferrer'>Ver en infojobs</a>
+      <a href={offer?.link} target='_blank' className='bg-[#7276b2] text-[#f0f3ff] py-2 px-3 text-sm text-center rounded duration-300 hover:bg-[#676ba7]' rel='noreferrer'>Infojobs</a>
     </header>
   )
 }

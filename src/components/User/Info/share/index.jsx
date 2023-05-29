@@ -19,9 +19,9 @@ export function Share ({ link }) {
   }, [notification])
 
   return (
-    <div className='flex gap-2 items-center justify-between h-[50px] bg-[#7276b5] px-3 rounded'>
-      <p className='w-[60%] text-ellipsis overflow-x-hidden whitespace-nowrap text-[#eeeded] text-sm'>{link}</p>
-      <button className='text-[#f0f3ff] border rounded-md border-[#f0f3ff] py-1 px-4 text-sm duration-300 hover:bg-[#676ba7]' onClick={handleClick}>
+    <div className='flex gap-2 items-center justify-between h-[50px] bg-[#cfd2f5] px-3 rounded'>
+      <p className='w-[60%] text-ellipsis overflow-x-hidden whitespace-nowrap text-[#2c2a2e] text-sm'>{link}</p>
+      <button className=' bg-[#7276b2] text-[#f0f3ff] border rounded-md border-[#f0f3ff] py-1 px-4 text-sm duration-300 hover:bg-[#676ba7]' onClick={handleClick}>
         Copiar
       </button>
 
