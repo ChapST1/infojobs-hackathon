@@ -4,7 +4,7 @@ import { Skills } from './skills'
 
 export function Offer ({ offer }) {
   return (
-    <div className=' col-span-5 overflow-y-scroll' id='user-offer'>
+    <div className=' col-span-5 overflow-y-scroll relative' id='user-offer'>
       <div className=' p-4 w-[90%]'>
         <InitialInfo offer={offer} />
 

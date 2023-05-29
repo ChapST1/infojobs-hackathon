@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    @apply bg-[#f0f3ff]
+}
+
+#user-container{
+    height: calc(100vh - 70px);
+}
 
 #user-description, #user-offer {
     --sb-track-color: #f3f3ff;

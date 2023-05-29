@@ -50,7 +50,7 @@ export function IconArrow ({ styles = '' }) {
   )
 }
 
-export function IconLogo () {
+export function IconLogo ({ className }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -62,7 +62,7 @@ export function IconLogo () {
         enableBackground: 'new 0 0 138 34.9'
       }}
       viewBox='0 0 138 34.9'
-      className='w-40 py-2 block m-auto fill-[#f0f3ff]'
+      className={className}
     >
       <g id='Logo_3_'>
         <g id='InfoJobs_3_'>

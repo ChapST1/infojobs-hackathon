@@ -10,7 +10,7 @@ import { Header } from './header'
 
 export function Info ({ offer }) {
   return (
-    <div className=' col-span-2 bg-[#f0f3ff] p-4 relative'>
+    <div className=' col-span-2 bg-[#f0f3ff] p-4 relative border-l-2 border-[#676ba746]'>
       <Header offer={offer} />
 
       <div className='mt-4 py-2 border-t-2 border-[#676ba7] h-[250px]  overflow-y-scroll ' id='user-description'>
@@ -21,7 +21,7 @@ export function Info ({ offer }) {
 
       <Actions>
         <Heart offerId={offer?.id} offerCategory={offer?.category?.value} />
-        <Save />
+        <Save offerId={offer?.id} />
       </Actions>
 
       <Share link={offer?.link} />
