@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#user-description {
+    --sb-track-color: #191919;
+    --sb-thumb-color: #7d7d7d;
+    --sb-size: 4px;
+
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+#user-description::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+#user-description::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 10px;
+}
+
+#user-description::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+
+}
