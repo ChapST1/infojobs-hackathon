@@ -3,7 +3,7 @@ import { DEFAULT_VALUE } from '../../../../constants'
 export function InitialInfo ({ offer }) {
   return (
     <>
-      <h2 className='text-[#2c2a2e] font-bold text-2xl '>Puesto:                  <span className='text-[#82838c]'>{offer?.title}                                        </span></h2>
+      <h2 className='text-[#2c2a2e] font-bold text-2xl '>Puesto:                  <span className='text-[#82838c]'>{offer?.title}                                      </span></h2>
       <h2 className='text-[#2c2a2e] font-bold text-2xl pt-3'>Informacion de puesto:</h2>
       <h4 className='text-base text-[#2c2a2e] text-1xl font-semibold py-[2px]'>Tipo de contrato:        <span className='text-[#82838c]'>{offer?.contractType?.value || DEFAULT_VALUE}         </span></h4>
       <h4 className='text-base text-[#2c2a2e] text-1xl font-semibold py-[2px]'>Teletrabajo:             <span className='text-[#82838c]'>{offer?.teleworking?.value || DEFAULT_VALUE}          </span></h4>

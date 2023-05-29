@@ -10,11 +10,9 @@ export function ShowSingleOffer ({ params }) {
   const offer = allOffers.find((offer) => offer.id === id)
 
   return (
-    <OffersStorageProvider>
-      <LikeContextProvider>
-        <Navigation />
-        <User offer={offer} />
-      </LikeContextProvider>
-    </OffersStorageProvider>
+    <LikeContextProvider>
+      <Navigation />
+      <User offer={offer} />
+    </LikeContextProvider>
   )
 }

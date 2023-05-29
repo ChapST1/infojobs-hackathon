@@ -11,8 +11,8 @@ export function Links () {
       path: '/oferta'
     },
     {
-      name: 'Mi almacen',
-      path: '/almacen'
+      name: 'Mi cuenta',
+      path: '/me'
 
     }
   ]
