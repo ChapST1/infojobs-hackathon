@@ -1,38 +1,32 @@
 import { Actions } from './actions'
+import { Heart } from './actions/heart'
+import { Save } from './actions/save'
 import { Category } from './category'
 import { Share } from './share'
+import { DEFAULT_IMAGE } from '../../../constants'
+import { Controls } from '../Offer/controls'
+import { FormatInfo } from '../Offer/formatInfo'
+import { Header } from './header'
 
 export function Info ({ offer }) {
-  const DEFAULT_IMAGE = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmYdVu7rpU378wt-Y5Rwa1yIb_Z_0Mic05cA&usqp=CAU'
-
   return (
-    <div className=' col-span-2 bg-[#060606] p-4'>
-      <header className='w-full flex items-center justify-between gap-4'>
-        <div className='flex items-start gap-3'>
-          <img src={offer?.profile.logoUrl || DEFAULT_IMAGE} alt='' className='w-[50px] rounded-full' />
-          <div className='flex flex-col gap-1'>
-            <a className='text-white text-sm hover:underline' href={offer?.profile.web} target='_blank' rel='noreferrer'>{offer?.profile.name}</a>
-            <span className='text-white text-xs'>Publicacion</span>
-          </div>
-        </div>
+    <div className=' col-span-2 bg-[#f0f3ff] p-4 relative'>
+      <Header offer={offer} />
 
-        <button className='text-white border py-1 px-3 text-sm'>Ir a infojobs</button>
-      </header>
-      {/* descripcion */}
-      <div className='mt-4 py-2 border-t-2 border-[#828282] h-[250px]  overflow-y-scroll ' id='user-description'>
-        <p className='text-[#d7d7d7]'>
-          {offer?.description}
-        </p>
+      <div className='mt-4 py-2 border-t-2 border-[#676ba7] h-[250px]  overflow-y-scroll ' id='user-description'>
+        <FormatInfo info={offer?.profile.description} />
       </div>
 
-      {/* categoria */}
       <Category category={offer?.category?.value} subCategory={offer?.subcategory?.value} />
 
-      {/* acciones */}
-      <Actions />
+      <Actions>
+        <Heart offerId={offer?.id} offerCategory={offer?.category?.value} />
+        <Save />
+      </Actions>
 
-      {/* copiar enlace */}
       <Share link={offer?.link} />
+
+      <Controls />
     </div>
   )
 }

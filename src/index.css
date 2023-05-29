@@ -3,25 +3,22 @@
 @tailwind utilities;
 
 
-#user-description {
-    --sb-track-color: #191919;
-    --sb-thumb-color: #7d7d7d;
-    --sb-size: 4px;
+#user-description, #user-offer {
+    --sb-track-color: #f3f3ff;
+    --sb-thumb-color: #7276b5;
+    --sb-size: 8px;
 
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
 }
 
-#user-description::-webkit-scrollbar {
+#user-description::-webkit-scrollbar, #user-offer::-webkit-scrollbar {
     width: var(--sb-size)
 }
 
-#user-description::-webkit-scrollbar-track {
+#user-description::-webkit-scrollbar-track, #user-offer::-webkit-scrollbar-track {
     background: var(--sb-track-color);
-    border-radius: 10px;
 }
 
-#user-description::-webkit-scrollbar-thumb {
+#user-description::-webkit-scrollbar-thumb, #user-offer::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
-    border-radius: 10px;
-
 }

@@ -9,8 +9,8 @@ export function Save () {
   }
 
   return (
-    <div onClick={handleClick} className='cursor-pointer'>
-      <IconSave styles={` scale-125 ${isSaved ? 'fill-white' : 'stroke-white'}`} />
+    <div onClick={handleClick} className='cursor-pointer  bg-[#cfd2f5] w-[45px] h-[45px] flex items-center justify-center rounded-full'>
+      <IconSave styles={`scale-125 ${isSaved ? 'fill-[#4f527c]' : 'fill-[#f0f3ff]'}`} />
     </div>
   )
 }

@@ -1,15 +1,11 @@
+import { LikeContextProvider } from '../context/LIkesProvider'
 import { useOffersContext } from '../hook/useOffersContext'
-import { User } from './User'
+import { User } from '../components/User'
 
 export function ShowSingleOffer ({ params }) {
   const { allOffers } = useOffersContext()
-
   const id = params.id
   const offer = allOffers.find((offer) => offer.id === id)
-
-  console.log({
-    allOffers
-  })
 
   // const handleNext = () => {
   //   index.current += 1
@@ -48,8 +44,8 @@ export function ShowSingleOffer ({ params }) {
   // )
 
   return (
-    <>
+    <LikeContextProvider>
       <User offer={offer} />
-    </>
+    </LikeContextProvider>
   )
 }

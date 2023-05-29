@@ -1,9 +1,8 @@
 import { Route } from 'wouter'
-import { Card } from './components/Card'
 import { OfferContextProvider } from './context/OfferProvider'
 import { Home } from './page/Home'
 import { Offer } from './page/Offer'
-import { ShowSingleOffer } from './components/ShowSingleOffer'
+import { ShowSingleOffer } from './page/ShowSingleOffer'
 
 function App () {
   return (

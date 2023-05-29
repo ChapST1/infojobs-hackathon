@@ -2,9 +2,12 @@ import { useEffect, useRef } from 'react'
 import { useOffersContext } from '../../../../hook/useOffersContext'
 import { useLocation } from 'wouter'
 import { useOffers } from '../../../../hook/useOffers'
+import { Loading } from '../../../Loading'
+import { IconArrow } from '../../../icons'
 
 export function Controls () {
   const [location, setLocation] = useLocation()
+
   const index = useRef(0)
   const { allOffers } = useOffersContext()
   const { setPage, loading } = useOffers()
@@ -34,10 +37,17 @@ export function Controls () {
 
     setLocation(`/oferta/${allOffers[index.current].id}`)
   }, [allOffers])
+
   return (
-    <div className='absolute right-0 top-[50%] translate-x-[-50%] flex flex-col gap-3'>
-      <button className='block text-white border' onClick={handlePrev}>Prev</button>
-      <button className='block text-white border' onClick={handleNext}>Next</button>
-    </div>
+    <>
+      <div className='absolute left-[-80px] top-[50%] translate-y-[-50%] flex flex-col gap-3'>
+        <aside className=' w-[40px] h-[40px] flex items-center justify-center rounded-full bg-[#7276b5] cursor-pointer ' onClick={handlePrev}><IconArrow styles='fill-[#f0f3ff] scale-100 rotate-[90deg]' /></aside>
+        <aside className=' w-[40px] h-[40px] flex items-center justify-center rounded-full bg-[#7276b5] cursor-pointer ' onClick={handleNext}><IconArrow styles='fill-[#f0f3ff] scale-100 rotate-[-90deg] ' /></aside>
+      </div>
+
+      {
+        loading ? <Loading /> : null
+      }
+    </>
   )
 }

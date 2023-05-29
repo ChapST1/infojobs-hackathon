@@ -1,10 +1,10 @@
-import { useCallback } from 'react'
+import { INFOJOBS_TOKEN } from './config'
 
 const options = {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',
-    Authorization: 'Basic NGY0ZmQwMzAzODcyNDBiOWFiYzg1MzVlNGZmYzk1MTI6REV3ZkV5UVF1dUhsalE0d2R4OEVOZ01CekRWOXIrQUw2Qkdpc0RaVWVEamJjeE1OWUE='
+    Authorization: `Basic ${INFOJOBS_TOKEN}`
   }
 }
 

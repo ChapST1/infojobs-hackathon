@@ -1,10 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { useOffers } from '../hook/useOffers'
 import { useLocation } from 'wouter'
+import { Loading } from '../components/Loading'
 
 export function Offer () {
   const [, setLocation] = useLocation()
-  const { allOffers } = useOffers()
+  const { allOffers, loading } = useOffers()
   const firstOffer = allOffers[0]?.id
 
   useEffect(() => {
@@ -14,6 +15,10 @@ export function Offer () {
   }, [allOffers, firstOffer, setLocation])
 
   return (
-    <h1>loading...</h1>
+    <>
+      {
+        loading ? <Loading /> : <button>Ir al inicio</button>
+      }
+    </>
   )
 }
