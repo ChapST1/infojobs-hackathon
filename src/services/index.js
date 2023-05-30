@@ -8,8 +8,8 @@ const options = {
   }
 }
 
-export async function getAllOffer (apiUrl, page = 0) {
-  const response = await fetch(`${apiUrl}?page=${page}`, options)
+export async function getAllOffer (apiUrl) {
+  const response = await fetch(`${apiUrl}`, options)
 
   const data = await response.json()
   const { items } = data
@@ -29,4 +29,11 @@ export async function getSingleOffers (arr) {
   })
 
   return Promise.all(allPromises).then((values) => values)
+}
+
+export async function getAllCategories () {
+  const response = await fetch('/api/api/1/dictionary/category', options)
+  const data = await response.json()
+
+  return data
 }

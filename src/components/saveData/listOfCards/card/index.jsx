@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { DEFAULT_VALUE } from '../../../../constants'
 import { useSaveOffersContext } from '../../../../hook/useStorageOffersContext'
 import { getFromLocalStorage, saveToLocalStorage } from '../../../../utils'
