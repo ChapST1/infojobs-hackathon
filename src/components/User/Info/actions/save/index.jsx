@@ -41,10 +41,6 @@ export function Save ({ offerId }) {
   }
 
   useEffect(() => {
-    console.log({
-      saveOffers
-    })
-
     const searchSaveInfo = saveOffers.find((like) => like.offerId === offerId)
     setIsSaved(searchSaveInfo?.isSaved ?? false)
   }, [offerId, saveOffers])

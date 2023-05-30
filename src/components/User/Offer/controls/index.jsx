@@ -25,8 +25,6 @@ export function Controls () {
 
   useEffect(() => {
     if (index.current >= allOffers.length - 1) {
-      console.log('entro al if')
-
       index.current = 0
       setPage((prev) => prev + 1)
     }

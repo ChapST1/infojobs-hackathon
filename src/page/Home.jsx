@@ -1,6 +1,5 @@
 import { Link } from 'wouter'
 import { IconLogo } from '../components/icons'
-import { Navigation } from '../components/navigation'
 
 export function Home () {
   return (

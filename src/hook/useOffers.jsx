@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getAllOffer, getSingleOffers } from '../services'
 import { useOffersContext } from './useOffersContext'
 import { useLikesContext } from './useLikesContext'
@@ -15,10 +15,6 @@ export function useOffers () {
   const { category } = useCategory()
 
   useEffect(() => {
-    console.log({
-      page,
-      allLikes
-    })
     setLoading(true)
 
     if (allLikes?.length > 0) {

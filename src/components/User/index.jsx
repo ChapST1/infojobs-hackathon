@@ -1,5 +1,4 @@
 import { Info } from './Info'
-import { Actions } from './Info/actions'
 import { Offer } from './Offer'
 
 export function User ({ offer }) {
