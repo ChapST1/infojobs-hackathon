@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Notification } from '../../../Notification'
+import { AnimatePresence } from 'framer-motion'
 
 export function Share ({ link }) {
   const [notification, setNotification] = useState(false)
@@ -24,10 +25,11 @@ export function Share ({ link }) {
       <button className=' bg-[#7276b2] text-[#f0f3ff] border rounded-md border-[#f0f3ff] py-1 px-4 text-sm duration-300 hover:bg-[#676ba7]' onClick={handleClick}>
         Copiar
       </button>
-
-      {
-        notification && (<Notification>Enlace copiado</Notification>)
-      }
+      <AnimatePresence>
+        {
+          notification && (<Notification>Enlace copiado</Notification>)
+        }
+      </AnimatePresence>
     </div>
   )
 }

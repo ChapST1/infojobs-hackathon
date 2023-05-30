@@ -5,7 +5,9 @@
 body{
     @apply bg-[#f0f3ff]
 }
-
+body, #root{
+    @apply w-full h-screen overflow-y-hidden
+}
 #user-container{
     height: calc(100vh - 70px);
 }

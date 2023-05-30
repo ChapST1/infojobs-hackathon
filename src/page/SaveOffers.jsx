@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import { Empty } from '../components/Error/Empty'
 import { Navigation } from '../components/navigation'
 import { SaveData } from '../components/saveData'
@@ -7,7 +9,7 @@ export function SaveOffers () {
   const savedOffers = getFromLocalStorage('saveOffers') ?? []
 
   return (
-    <section>
+    <motion.section initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }}>
       <Navigation />
       {
         savedOffers?.length > 0
@@ -16,6 +18,6 @@ export function SaveOffers () {
             <Empty />
             )
       }
-    </section>
+    </motion.section>
   )
 }

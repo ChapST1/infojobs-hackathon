@@ -37,7 +37,7 @@ export function Heart ({ offerId, offerCategory }) {
 
   return (
     <div className=' cursor-pointer select-none bg-[#f6d3e6] w-[45px] h-[45px] flex items-center justify-center rounded-full' onClick={handleClick}>
-      <IconHeart styles={` scale-125 ${isLiked ? 'fill-[#ef6666]' : 'fill-[#f0f3ff]'}`} />
+      <IconHeart styles={` duration-300 scale-125 ${isLiked ? 'fill-[#ef6666]' : 'fill-[#f0f3ff]'}`} />
     </div>
   )
 }

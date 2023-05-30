@@ -17,7 +17,7 @@ export function Offer () {
   return (
     <>
       {
-        loading ? <Loading /> : <button>Ir al inicio</button>
+        loading ? <Loading /> : null
       }
     </>
   )
