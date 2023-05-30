@@ -37,7 +37,3 @@ export function useOffers () {
 
   return { allOffers, loading, setPage }
 }
-
-/*
-https://api.infojobs.net/api/1/dictionary/category
-*/

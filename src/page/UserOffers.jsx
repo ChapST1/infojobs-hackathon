@@ -5,7 +5,7 @@ import { Navigation } from '../components/navigation'
 import { SaveData } from '../components/saveData'
 import { getFromLocalStorage } from '../utils'
 
-export function SaveOffers () {
+export function UserOffers () {
   const savedOffers = getFromLocalStorage('saveOffers') ?? []
 
   return (

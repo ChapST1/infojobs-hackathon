@@ -13,5 +13,6 @@ export default defineConfig({
       }
     }
   },
+  // use base url proyect path
   plugins: [react()]
 })
