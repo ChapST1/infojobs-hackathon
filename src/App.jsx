@@ -3,8 +3,8 @@ import { OfferContextProvider } from './context/OfferProvider'
 import { Home } from './page/Home'
 import { Offer } from './page/Offer'
 import { ShowSingleOffer } from './page/ShowSingleOffer'
-import { SaveOffers } from './page/SaveOffers'
 import { OffersStorageProvider } from './context/OfferStorageProvider'
+import { UserOffers } from './page/UserOffers'
 
 function App () {
   return (
@@ -14,7 +14,7 @@ function App () {
         <Route path='/' component={Home} />
         <Route path='/oferta' component={Offer} />
         <Route path='/oferta/:id' component={ShowSingleOffer} />
-        <Route path='/me' component={SaveOffers} />
+        <Route path='/me' component={UserOffers} />
 
       </OffersStorageProvider>
     </OfferContextProvider>
