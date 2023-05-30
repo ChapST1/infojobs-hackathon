@@ -4,6 +4,7 @@ import { Header } from '../User/Info/header'
 import { FormatInfo } from '../User/Offer/formatInfo'
 import { Category } from '../User/Info/category'
 import { Share } from '../User/Info/share'
+import { motion } from 'framer-motion'
 
 export function Modal ({ detailState, offer }) {
   const modalRef = useRef()
@@ -15,8 +16,8 @@ export function Modal ({ detailState, offer }) {
   }
 
   return (
-    <section className='w-full h-screen fixed bottom-0 left-0 bg-[#f0f3ffcd] text-white flex items-start justify-center p-3' onClick={handleClick} ref={modalRef}>
-      <div className=' w-[90%] h-screen grid grid-cols-7 overflow-y-scroll gap-4 bg-[#f0f3ff] p-4 rounded-lg'>
+    <motion.section className='w-full h-screen fixed bottom-0 left-0 bg-[#f0f3ffcd] text-white flex items-start justify-center p-3' onClick={handleClick} ref={modalRef} initial={{ opacity: 0, translateY: 20 }} animate={{ opacity: 1, translateY: 0 }} exit={{ opacity: 0, translateY: 20 }}>
+      <div className=' w-[90%] h-screen grid grid-cols-7 overflow-y-scroll gap-4 bg-[#f0f3ff] p-4 rounded-lg' id='user-description'>
         <Offer offer={offer} />
         <div className='col-span-2'>
           <Header offer={offer} />
@@ -28,6 +29,6 @@ export function Modal ({ detailState, offer }) {
           <Share link={offer?.link} />
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }

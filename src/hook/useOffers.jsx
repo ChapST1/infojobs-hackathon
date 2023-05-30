@@ -16,7 +16,6 @@ export function useOffers () {
 
   useEffect(() => {
     setLoading(true)
-
     if (allLikes?.length > 0) {
       const getLastCategory = allLikes[allLikes.length - 1].offerCategory
       const findKeyCategory = category.find((item) => item.value === getLastCategory)
@@ -34,12 +33,6 @@ export function useOffers () {
     }
 
     getOffers()
-    // getAllOffer('/api/api/9/offer', page)
-    //   .then(async (res) => {
-    //     const data = await getSingleOffers(res.allIds)
-    //     setAllOffers(data)
-    //   })
-    //   .finally(() => setLoading(false))
   }, [page, categoryKey])
 
   return { allOffers, loading, setPage }
